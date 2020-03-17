@@ -1,1 +1,117 @@
-@import "./styles/base.less";
+@white:  #EEEEEE;
+@light:  #AAAAAA;
+@gray:   #555555;
+@dark:   #3C3C3C;
+@black:  #313131;
+
+@red:    #FDC7DC;
+@yellow: #F5EEA3;
+@green:  #BDEDC2;
+@blue:   #A6E2FF;
+@purple: #D8C8FF;
+
+
+atom-text-editor {
+    background: @black;
+    color:      @white;
+
+    .syntax--operator,
+    { color: @white; }
+
+    .syntax--comment,
+    { color: @light; }
+
+    .selection.region, 
+    .wrap-guide,
+    .indent-guide-improved,
+    { background: @gray; }
+
+    .invisible-character,
+    { color: @gray; }
+
+    .gutter,
+    { background: @dark; }
+
+    .syntax--identifier,
+    .syntax--variable,
+    { color: @red }
+
+    .syntax--function,
+    .syntax--support,
+    { color: @yellow; }
+
+    .syntax--class,
+    .syntax--type,
+    .syntax--entity,
+    { color: @green; }
+
+    .syntax--storage,
+    .syntax--keyword,
+    { color: @blue; }
+
+    .syntax--constant,
+    .syntax--string,
+    { color: @purple; }
+
+    .cursor,
+    { border-left: 2px solid @white; }
+
+    .bracket-matcher.region,
+    { border-bottom: 2px solid @light; }
+}
+
+.syntax--html {
+    .syntax--tag,
+    { color: @blue; }
+}
+
+.css {
+    .syntax--unit,
+    { color: @purple; }
+}
+
+.syntax--haskell {
+    .syntax--keyword.syntax--operator,
+    .syntax--keyword>.syntax--operator,
+    .syntax--double-colon,
+    .syntax--arrow,
+    .syntax--big-arrow,
+    { color: @white; }
+
+    .syntax--meta.syntax--preprocessor,
+    { color: @light; }
+
+    .syntax--identifier,
+    .syntax--entity.syntax--function,
+    { color: @yellow; }
+
+    .syntax--class.syntax--prelude,
+    { color: @green; }
+
+    .syntax--keyword.syntax--infixl,
+    .syntax--keyword.syntax--infixr,
+    .syntax--keyword.syntax--infix,
+    { color: @blue; }
+
+    .syntax--module,
+    { color: @purple; }
+}
+
+.syntax--java {
+    *,
+    .syntax--section,
+    .syntax--operator,
+    { color: @white; }
+
+    .syntax--name.syntax--function,
+    { color: @yellow; }
+
+    .syntax--type,
+    { color: @green; }
+
+    .syntax--modifier,
+    { color: @blue; }
+
+    .syntax--modifier.syntax--import,
+    { color: @purple; }
+}
