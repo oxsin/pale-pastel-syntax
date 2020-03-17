@@ -1,16 +1,16 @@
-@white:  #EEEEEE;
-@light:  #AAAAAA;
+@white:  #FFFFFF;
+@light:  #ACACAC;
 @gray:   #555555;
-@dark:   #3C3C3C;
-@black:  #313131;
+@dark:   #3F3F3F;
+@black:  #303030;
 
-@red:    #FDC7DC;
-@yellow: #F5EEA3;
-@green:  #BDEDC2;
-@blue:   #A6E2FF;
-@purple: #D8C8FF;
+@red:    #FCC5D9;
+@yellow: #EEECB9;
+@green:  #BEE9C6;
+@blue:   #A7E2FF;
+@purple: #E0CEFF;
 
-//
+
 atom-text-editor {
     background: @black;
     color:      @white;
@@ -21,16 +21,8 @@ atom-text-editor {
     .syntax--comment,
     { color: @light; }
 
-    .selection.region, 
-    .wrap-guide,
-    .indent-guide-improved,
-    { background: @gray; }
-
     .invisible-character,
     { color: @gray; }
-
-    .gutter,
-    { background: @dark; }
 
     .syntax--identifier,
     .syntax--variable,
@@ -53,11 +45,23 @@ atom-text-editor {
     .syntax--string,
     { color: @purple; }
 
+    .selection.region, 
+    .wrap-guide,
+    { background: @gray; }
+
+    .gutter,
+    { background: @dark; }
+
     .cursor,
     { border-left: 2px solid @white; }
 
     .bracket-matcher.region,
     { border-bottom: 2px solid @light; }
+
+    .indent-guide-improved { background: #555555;
+    &.indent-guide-stack   { background: #777777;
+    &.indent-guide-active  { background: #888888;
+    } } }
 }
 
 .syntax--html {
@@ -66,6 +70,9 @@ atom-text-editor {
 }
 
 .css {
+    .syntax--property-name,
+    { color: @yellow; }
+
     .syntax--unit,
     { color: @purple; }
 }
@@ -74,6 +81,7 @@ atom-text-editor {
     .syntax--keyword.syntax--operator,
     .syntax--keyword>.syntax--operator,
     .syntax--double-colon,
+    .syntax--type-signature,
     .syntax--arrow,
     .syntax--big-arrow,
     { color: @white; }
@@ -114,4 +122,9 @@ atom-text-editor {
 
     .syntax--modifier.syntax--import,
     { color: @purple; }
+}
+
+.syntax--python {
+    .syntax--keyword.syntax--operator,
+    { color: @white; }
 }
