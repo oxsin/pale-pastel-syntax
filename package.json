@@ -1,7 +1,11 @@
 {
   "name": "pale-pastel-syntax",
   "theme": "syntax",
+<<<<<<< HEAD
   "version": "0.2.0",
+=======
+  "version": "0.1.0",
+>>>>>>> b331dd5c6569cdeb823d9c2c33badf2a404569ee
   "description": "A short description of your syntax theme",
   "keywords": [
     "syntax",
